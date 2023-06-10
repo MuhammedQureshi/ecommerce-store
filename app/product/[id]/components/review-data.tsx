@@ -25,7 +25,7 @@ const ReviewData = () => {
                   <div className="h-3 rounded-full border border-gray-200 bg-gray-100" />
                   {count.count > 0 ? (
                     <div
-                      className="absolute inset-y-0 rounded-full border border-green-400 bg-green-400"
+                      className="absolute inset-y-0 rounded-full border border-black bg-black"
                       style={{ width: `calc(${count.count} / ${reviews.totalCount} * 100%)` }}
                     />
                   ) : null}

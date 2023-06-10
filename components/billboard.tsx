@@ -1,18 +1,30 @@
+import { cn } from "@/libs/utils";
 import Button from "./button";
 
-const Billboard = () => {
+interface BillboardProps {
+  title: string;
+  actionLabel: string;
+  backgroundColor: string;
+  imageUrl: string;
+}
+
+const Billboard: React.FC<BillboardProps> = ({
+  title,
+  actionLabel,
+  backgroundColor,
+  imageUrl
+}) => {
   return ( 
-    <div className="hidden lg:block relative aspect-[2.4/1] overflow-hidden bg-[#f7f0ea]">
-      <img src="/bg.svg" className="absolute object-cover" />
-      <div className="left-10 top-32 absolute space-y-2">
-        <p className="text-lg">In This Season, Find The Best 🔥</p>
-        <h2 className="font-semibold text-6xl text-black">
-          Exclusive Collection <br /> For Everyone
-        </h2>
-        <Button>Check It Out</Button>
-      </div>
-      <div className="aspect-square absolute right-0">
-        <img src="/user.png" className="object-cover" />
+    <div className="p-4 sm:p-6 lg:p-8 rounded-xl overflow-hidden">
+      <div style={{ backgroundColor, backgroundImage: `url(${imageUrl})` }} className="rounded-xl relative aspect-square md:aspect-[2.4/1] overflow-hidden bg-cover">
+        <div className="h-full w-full flex flex-col justify-center items-center text-center gap-y-8">
+          <div className="font-bold text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs">
+            {title}
+          </div>
+          <Button>
+            {actionLabel}
+          </Button>
+        </div>
       </div>
     </div>
    );

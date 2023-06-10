@@ -1,10 +1,11 @@
+
+import { lists, product } from '@/constants';
+import ProductList from '@/components/product-list'
+;
 import Gallery from './components/gallery';
 import Info from './components/info';
 import Form from './components/form';
-
-import { lists, product } from '@/constants';
 import Reviews from './components/reviews';
-import ProductList from '@/components/product-list';
 
 
 const Product = () => {
