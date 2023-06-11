@@ -3,7 +3,7 @@ import Button from "./button";
 
 interface BillboardProps {
   title: string;
-  actionLabel: string;
+  actionLabel?: string;
   backgroundColor: string;
   imageUrl: string;
 }
@@ -21,9 +21,11 @@ const Billboard: React.FC<BillboardProps> = ({
           <div className="font-bold text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs">
             {title}
           </div>
-          <Button>
-            {actionLabel}
-          </Button>
+          {actionLabel && (
+            <Button>
+              {actionLabel}
+            </Button>
+          )}
         </div>
       </div>
     </div>

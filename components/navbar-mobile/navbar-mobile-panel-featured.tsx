@@ -13,10 +13,10 @@ const NavbarMobilePanelFeatured: React.FC<NavbarMobilePanelFeaturedProps> = ({
             <img src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
           </div>
           <a href={item.href} className="mt-6 block font-medium text-gray-900">
-            <span className="absolute inset-0 z-10" aria-hidden="true" />
+            <span className="absolute inset-0 z-10" />
             {item.name}
           </a>
-          <p aria-hidden="true" className="mt-1">
+          <p className="mt-1">
             Shop now
           </p>
         </div>

@@ -14,7 +14,7 @@ const NavbarMenu = () => {
             {({ open }) => (
               <>
                 {/* Category Title */}
-                <NavbarCategoryItem open={open} name={category.name} />
+                <NavbarCategoryItem open={open} name={category.name} href={category.href} />
                 {/* Category Popoup panel */}
                 <NavbarCategoryPanel category={category} />
               </>

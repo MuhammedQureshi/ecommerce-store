@@ -11,7 +11,7 @@ import Reviews from './components/reviews';
 const Product = () => {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto px-4 py-10 sm:px-6 max-w-7xl lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
           {/* Gallery*/}
           <Gallery images={product.images} />
