@@ -23,7 +23,7 @@ const Gallery: React.FC<GalleryProps> = ({
       </div>
 
       {/* Render main image based on selected tab */}
-      <Tab.Panels className="aspect-h-1 aspect-w-1 w-full">
+      <Tab.Panels className="aspect-square w-full">
         {images.map((image) => (
           <Tab.Panel key={image.id}>
             <img

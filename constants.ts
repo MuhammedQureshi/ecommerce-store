@@ -384,6 +384,17 @@ export const reviews = {
 
 export const filters = [
   {
+    id: 'category',
+    name: 'Category',
+    options: [
+      { value: 'new-arrivals', label: 'All New Arrivals' },
+      { value: 'tees', label: 'Tees' },
+      { value: 'crewnecks', label: 'Crewnecks' },
+      { value: 'sweatshirts', label: 'Sweatshirts' },
+      { value: 'pants-shorts', label: 'Pants & Shorts' },
+    ],
+  },
+  {
     id: 'color',
     name: 'Color',
     options: [
@@ -393,17 +404,6 @@ export const filters = [
       { value: 'brown', label: 'Brown' },
       { value: 'green', label: 'Green' },
       { value: 'purple', label: 'Purple' },
-    ],
-  },
-  {
-    id: 'category',
-    name: 'Category',
-    options: [
-      { value: 'new-arrivals', label: 'All New Arrivals' },
-      { value: 'tees', label: 'Tees' },
-      { value: 'crewnecks', label: 'Crewnecks' },
-      { value: 'sweatshirts', label: 'Sweatshirts' },
-      { value: 'pants-shorts', label: 'Pants & Shorts' },
     ],
   },
   {

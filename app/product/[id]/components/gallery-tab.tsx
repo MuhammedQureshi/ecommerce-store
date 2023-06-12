@@ -11,7 +11,7 @@ const GalleryTab: React.FC<GalleryTabProps> = ({
 }) => {
   return ( 
     <Tab
-      className="relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-white"
+      className="relative flex aspect-square cursor-pointer items-center justify-center rounded-md bg-white"
     >
       {({ selected }) => (
         <div>

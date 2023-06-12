@@ -1,9 +1,11 @@
 import { Urbanist } from 'next/font/google'
+import { ClerkProvider } from '@clerk/nextjs'
 
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 
 import './globals.css'
+import ModalProvider from '@/providers/modal-provider'
 
 const font = Urbanist({ subsets: ['latin'] })
 
@@ -18,12 +20,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={font.className}>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={font.className}>
+          <ModalProvider />
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
