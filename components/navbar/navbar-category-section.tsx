@@ -1,8 +1,8 @@
-interface NavbarSectionProps {
+interface NavbarCategorySectionProps {
   section: Record<string, any>;
 }
 
-const NavbarSection: React.FC<NavbarSectionProps> = ({
+const NavbarCategorySection: React.FC<NavbarCategorySectionProps> = ({
   section,
 }) => {
   return ( 
@@ -23,4 +23,4 @@ const NavbarSection: React.FC<NavbarSectionProps> = ({
   );
 };
 
-export default NavbarSection;
+export default NavbarCategorySection;

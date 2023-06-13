@@ -35,17 +35,13 @@ const Form: React.FC<FormProps> = ({
       </div>
 
       <div className="mt-10 flex items-center gap-x-3">
-        <Button>
-          <div className="flex items-center gap-x-2">
-            Add To Cart
-            <ShoppingCart size={20} />
-          </div>
+        <Button className="flex items-center gap-x-2">
+          Add To Cart
+          <ShoppingCart size={20} />
         </Button>
-        <Button className="bg-white text-black border border-black">
-          <div className="flex items-center gap-x-2">
-            Favorite
-            <Heart size={20} />
-          </div>
+        <Button className="bg-white text-black border border-black flex items-center gap-x-2">
+          Favorite
+          <Heart size={20} />
         </Button>
       </div>
     </div>

@@ -52,7 +52,7 @@ const ProductCard: React.FC<ProductCard> = ({
       </div>
       {/* Description */}
       <div>
-        <p className="font-bold text-lg">{title}</p>
+        <p className="font-semibold text-lg">{title}</p>
         <p className="text-sm text-gray-500">Same manufacturer as </p>
       </div>
       {/* Price & Reiew */}

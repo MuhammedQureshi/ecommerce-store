@@ -11,7 +11,7 @@ const Rating: React.FC<RatingProps> = ({
 }) => {
   return ( 
     <div className="flex items-center text-sm gap-x-1 text-gray-500">
-      <Star size={10} fill="#FFB547" color="#FFB547" />
+      <Star size={15} fill="#FFB547" color="#FFB547" />
       <p>{value.toFixed(1)}</p>
       <p>{`(${total} Reviews)`}</p>
     </div>

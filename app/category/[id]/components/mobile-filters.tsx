@@ -2,8 +2,9 @@ import { Dialog } from "@headlessui/react";
 
 import { filters } from "@/constants";
 
-import MobileClose from "./mobile-close";
 import MobileFilterItem from "./mobile-filter-item";
+import IconButton from "@/components/icon-button";
+import { X } from "lucide-react";
 
 interface MobileFiltersProps {
   open: boolean;
@@ -20,7 +21,7 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({ open, onClose }) => {
         <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl">
           <div className="flex items-center justify-between px-4">
             <h2 className="text-lg font-medium text-gray-900">Filters</h2>
-            <MobileClose onClick={onClose} />
+            <IconButton icon={<X size={15} />} onClick={onClose} />
           </div>
 
           {/* Filters */}
