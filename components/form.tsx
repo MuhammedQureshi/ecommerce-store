@@ -4,9 +4,8 @@ import { useState } from "react";
 import { Heart, ShoppingCart } from "lucide-react";
 
 import Button from "@/components/button";
-
-import ColorPicker from "./color-picker";
-import SizePicker from "./size-picker";
+import ColorPicker from "@/components/color-picker";
+import SizePicker from "@/components/size-picker";
 
 interface FormProps {
   product: Record<string, any>;

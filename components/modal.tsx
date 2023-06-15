@@ -1,15 +1,10 @@
 "use client";
 
-import ColorPicker from '@/app/product/[id]/components/color-picker';
-import Form from '@/app/product/[id]/components/form';
-import Gallery from '@/app/product/[id]/components/gallery';
-import Info from '@/app/product/[id]/components/info';
-import { product } from '@/constants';
-import { cn } from '@/libs/utils';
 import { Dialog, Transition } from '@headlessui/react'
-import { Star, X } from 'lucide-react';
-import IconButton from './icon-button';
+import { X } from 'lucide-react';
 import { Fragment } from 'react';
+
+import IconButton from '@/components/icon-button';
 
 interface ModalProps {
   open: boolean;

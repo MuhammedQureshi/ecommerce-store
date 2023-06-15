@@ -2,7 +2,7 @@
 
 import { Heart } from "lucide-react";
 
-import IconButton from "./icon-button";
+import IconButton from "@/components/icon-button";
 
 const FavoriteButton = () => {
   return ( 

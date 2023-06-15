@@ -1,5 +1,4 @@
-import { cn } from "@/libs/utils";
-import Button from "./button";
+import Button from "@/components/button";
 
 interface BillboardProps {
   title: string;

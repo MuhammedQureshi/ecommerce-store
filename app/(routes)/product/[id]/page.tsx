@@ -2,9 +2,9 @@
 import { lists, product } from '@/constants';
 import ProductList from '@/components/product-list'
 ;
-import Gallery from './components/gallery';
-import Info from './components/info';
-import Form from './components/form';
+import Gallery from '../../../../components/gallery';
+import Info from '../../../../components/info';
+import Form from '../../../../components/form';
 import Reviews from './components/reviews';
 
 

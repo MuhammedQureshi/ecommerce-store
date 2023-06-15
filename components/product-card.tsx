@@ -1,13 +1,13 @@
 "use client";
 
+import { MouseEventHandler } from "react";
 import { Expand, Heart, ShoppingCart } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-import Currency from "./currency";
-import IconButton from "./icon-button";
-import Rating from "./rating";
+import Currency from "@/components/currency";
+import IconButton from "@/components/icon-button";
+import Rating from "@/components/rating";
 import usePreviewModal from "@/hooks/usePreviewModal";
-import { MouseEventHandler } from "react";
 
 interface ProductCard {
   title: string;
