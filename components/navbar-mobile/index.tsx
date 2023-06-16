@@ -1,10 +1,10 @@
 import { Dialog, Tab, Transition } from "@headlessui/react";
 import { X } from "lucide-react";
+import { Fragment } from "react";
 
 import NavbarMobileMenu from "./navbar-mobile-menu";
 import NavbarMobilePanels from "./navbar-mobile-panels";
 import IconButton from "../icon-button";
-import { Fragment } from "react";
 
 interface NavbarMobileProps {
   open: boolean;

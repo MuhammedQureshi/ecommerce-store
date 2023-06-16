@@ -6,7 +6,7 @@ const NavbarCategorySection: React.FC<NavbarCategorySectionProps> = ({
   section,
 }) => {
   return ( 
-    <div key={section.name}>
+    <div>
       <p className="font-semibold text-gray-900">
         {section.name}
       </p>

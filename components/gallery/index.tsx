@@ -2,7 +2,7 @@
 
 import { Tab } from "@headlessui/react";
 
-import GalleryTab from "@/components/gallery-tab";
+import GalleryTab from "./gallery-tab";
 
 interface GalleryProps {
   images: Record<string, any>[];
