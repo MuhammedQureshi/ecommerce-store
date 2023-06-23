@@ -1,4 +1,4 @@
-import IconButton from "@/components/icon-button";
+import IconButton  from "@/components/ui/icon-button";
 import { X } from "lucide-react";
 
 const CartItemAction = () => {

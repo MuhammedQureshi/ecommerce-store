@@ -1,46 +1,26 @@
-import Container from '@/components/container';
+"use client";
+
+import { useEffect, useState } from 'react';
+
+import Container from '@/components/ui/container';
+import useCart from '@/hooks/use-cart';
 
 import Summary from './components/summary'
 import CartItem from './components/cart-item';
+import NoResults from '@/components/no-results';
 
+const CartPage = () => {
+  const [isMounted, setIsMounted] = useState(false);
+  const cart = useCart();
 
-const products = [
-  {
-    id: 1,
-    name: 'Basic Tee',
-    href: '#',
-    price: '$32.00',
-    color: 'Sienna',
-    inStock: true,
-    size: 'Large',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-01-product-01.jpg',
-    imageAlt: "Front of men's Basic Tee in sienna.",
-  },
-  {
-    id: 2,
-    name: 'Basic Tee',
-    href: '#',
-    price: '$32.00',
-    color: 'Black',
-    inStock: false,
-    leadTime: '3–4 weeks',
-    size: 'Large',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-01-product-02.jpg',
-    imageAlt: "Front of men's Basic Tee in black.",
-  },
-  {
-    id: 3,
-    name: 'Nomad Tumbler',
-    href: '#',
-    price: '$35.00',
-    color: 'White',
-    inStock: true,
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-01-product-03.jpg',
-    imageAlt: 'Insulated bottle with white base and black snap lid.',
-  },
-]
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
-const Cart = () => {
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <div className="bg-white">
       <Container>
@@ -48,13 +28,13 @@ const Cart = () => {
           <h1 className="text-3xl font-bold text-black">Shopping Cart</h1>
           <div className="mt-12 lg:grid lg:grid-cols-12 lg:items-start gap-x-12">
             <div className="lg:col-span-7">
-              <ul className="divide-y divide-gray-200 border-b border-t border-gray-200">
-                {products.map((product) => (
-                  <CartItem key={product.id} product={product} />
+              {cart.items.length === 0 && <p className="text-neutral-500">No items added to cart.</p>}
+              <ul>
+                {cart.items.map((item) => (
+                  <CartItem key={item.id} data={item} />
                 ))}
               </ul>
             </div>
-
             <Summary />
           </div>
         </div>
@@ -63,4 +43,4 @@ const Cart = () => {
   )
 };
 
-export default Cart;
+export default CartPage;

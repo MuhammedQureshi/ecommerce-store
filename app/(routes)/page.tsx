@@ -1,31 +1,27 @@
-import Billboard from "@/components/billboard";
-import Container from "@/components/container";
+import getBillboard from "@/actions/get-billboard";
+import getProducts from "@/actions/get-products";
 import ProductList from "@/components/product-list";
-import { lists } from "@/constants";
+import Billboard from "@/components/ui/billboard";
+import Container from "@/components/ui/container";
 
-export default function Home() {
+export const revalidate = 0;
+
+const HomePage = async () => {
+  const products = await getProducts({ isFeatured: true });
+  const billboard = await getBillboard("af747653-72c9-4df8-84f2-6b96bef00336");
+
   return (
     <Container>
       <div className="space-y-10 pb-10">
         <Billboard 
-          title="Exclusive Collection For Everyone" 
-          actionLabel="Check It Out" 
-          backgroundColor="#f7f0ea"
-          imageUrl="/billboard-bg-2.png"
+          data={billboard}
         />
         <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
-          <ProductList key={lists[0].title} title={lists[0].title} items={lists[0].items} />
-        </div>
-        <Billboard 
-          title="Explore Our New Arrivals" 
-          actionLabel="Explore Now" 
-          backgroundColor="#A3DCFF"
-          imageUrl="/billboard-bg-3.png"
-        />
-        <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
-          <ProductList key={lists[1].title} title={lists[1].title} items={lists[1].items} />
+          <ProductList title="Featured Products" items={products} />
         </div>
       </div>
     </Container>
   )
-}
+};
+
+export default HomePage;

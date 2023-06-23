@@ -1,15 +1,18 @@
 "use client";
 
-import usePreviewModal from "@/hooks/usePreviewModal";
-import { product } from "@/constants";
+import usePreviewModal from "@/hooks/use-preview-modal";
 import Gallery from "@/components/gallery";
 import Info from "@/components/info";
-import Form from "@/components/form";
+import Modal from "@/components/ui/modal";
 
-import Modal from "./modal";
 
 const PreviewModal = () => {
   const previewModal = usePreviewModal();
+  const product = usePreviewModal((state) => state.data);
+
+  if (!product) {
+    return null;
+  }
 
   return ( 
     <Modal 
@@ -21,9 +24,7 @@ const PreviewModal = () => {
           <Gallery images={product.images} />
         </div>
         <div className="sm:col-span-8 lg:col-span-7">
-          <Info name={product.name} price={product.price} />
-          <hr className="my-4" />
-          <Form product={product} />
+          <Info data={product} />
         </div>
       </div>
     </Modal>
