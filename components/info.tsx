@@ -1,10 +1,8 @@
 "use client";
 
-import { toast } from "react-hot-toast";
-import { Heart, ShoppingCart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 
 import Currency  from "@/components/ui/currency";
-import Rating from "@/components/rating";
 import Button from "@/components/ui/button";
 import { Product } from "@/types";
 import useCart from "@/hooks/use-cart";
@@ -27,7 +25,6 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         <p className="text-2xl text-gray-900">
           <Currency value={data?.price} />
         </p>
-        <Rating value={5} total={50} />
       </div>
       <hr className="my-4" />
       <div className="flex flex-col gap-y-6">
@@ -46,10 +43,6 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         <Button onClick={onAddToCart} className="flex items-center gap-x-2">
           Add To Cart
           <ShoppingCart size={20} />
-        </Button>
-        <Button className="bg-white text-black border border-black flex items-center gap-x-2">
-          Favorite
-          <Heart size={20} />
         </Button>
       </div>
     </div>

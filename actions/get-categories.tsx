@@ -1,9 +1,9 @@
 import { Billboard } from "@/types";
 
-const API_URL="http://localhost:3000/api/cfdf18cb-ae85-4d73-9928-1ecdee198f48/categories";
+const URL=`${process.env.NEXT_PUBLIC_API_URL}/categories`;
 
 const getCategories = async (): Promise<Billboard[]> => {
-  const res = await fetch(API_URL);
+  const res = await fetch(URL);
 
   return res.json();
 };

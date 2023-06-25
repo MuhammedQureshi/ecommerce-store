@@ -1,12 +1,11 @@
 import { Size } from "@/types";
 
-const API_URL="http://localhost:3000/api/cfdf18cb-ae85-4d73-9928-1ecdee198f48//sizes";
+const URL=`${process.env.NEXT_PUBLIC_API_URL}/sizes`;
 
 const getSizes = async (): Promise<Size[]> => {
-  const res = await fetch(API_URL);
+  const res = await fetch(URL);
 
   return res.json();
 };
 
 export default getSizes;
-

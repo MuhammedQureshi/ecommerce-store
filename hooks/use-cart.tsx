@@ -9,6 +9,7 @@ interface CartStore {
   items: Product[];
   addItem: (data: Product) => void;
   removeItem: (id: string) => void;
+  removeAll: () => void;
 }
 
 const useCart = create(
@@ -29,6 +30,7 @@ const useCart = create(
     set({ items: [...get().items.filter((item) => item.id !== id)] });
     toast.success('Item removed from cart.');
   },
+  removeAll: () => set({ items: [] }),
 }), {
   name: 'cart-storage',
   storage: createJSONStorage(() => localStorage)

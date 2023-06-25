@@ -1,7 +1,7 @@
 import { Product } from "@/types";
 import qs from "query-string";
 
-const API_URL="http://localhost:3000/api/cfdf18cb-ae85-4d73-9928-1ecdee198f48//products";
+const URL=`${process.env.NEXT_PUBLIC_API_URL}/products`;
 
 interface Query {
   categoryId?: string;
@@ -12,7 +12,7 @@ interface Query {
 
 const getProducts = async (query: Query): Promise<Product[]> => {
   const url = qs.stringifyUrl({
-    url: API_URL,
+    url: URL,
     query: { 
       colorId: query.colorId,
       sizeId: query.sizeId,
